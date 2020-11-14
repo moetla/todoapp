@@ -27,6 +27,39 @@
                 </div>
             </div>
         </div>
+        <div>
+
+
+
+
+
+
+
+            <u1 class="list-group t20">
+                {% for todolist in todo_items %}
+                    {% if todolist.completed %}
+                        <li class="list-group-item todo-completed">{{todolist.text}}</li>
+                    {% else %}
+                        <a href="#">"<li class="list-group-item">{{todolist.text}}</li>
+                    {% endif %}
+                {% endfor %}
+                <!--
+                <li class="list-group-item">Learn something new</li>
+                <li class="list-group-item todo-completed">Buy a new journey</li>
+                <li class="list-group-item">Book a dentist appointment</li>
+                --->
+            </u1>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row pad">
+            <div class="col-lg-12 text-center">
+                Copyright &copy; Andries
+            </div>
+        </div>
+    </footer>
+
 
     </body>
 </html>
