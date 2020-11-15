@@ -15,9 +15,12 @@ def index(request):
 @require_POST
 def addTodoItem(request):
     form = TodoListForm(request.POST)
+    #################################
+    # TO TEST INPUT USE A PRINT
     #print(request.POST['text'])
+    #################################
     if form.is_valid():
-        new_todo = TodoList(text=request.POST['text'])
+        new_todo = Todolist(text=request.POST['text'])
         new_todo.save()
 
     return redirect('index')
